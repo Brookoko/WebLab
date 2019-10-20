@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "eslint ./view",
+    "test": "eslint ./",
     "start": "npm run test; node root.js"
   },
   "repository": {
