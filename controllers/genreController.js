@@ -42,6 +42,7 @@ exports.genreDetail = (req, res, next) => {
   });
 };
 
+// eslint-disable-next-line no-unused-vars
 exports.genreCreateGet = (req, res) => {
   utils.loadHtml('genre_form', { title: 'Create Genre' });
 };

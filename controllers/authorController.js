@@ -5,6 +5,7 @@ const utils = require('../utils');
 const Author = require('../models/author');
 const Book = require('../models/book');
 
+// eslint-disable-next-line no-unused-vars
 exports.authorList = (req, res, next) => {
   Author.find()
     .sort([['lastName', 'ascending']])
@@ -40,6 +41,7 @@ exports.authorDetail = (req, res, next) => {
   });
 };
 
+// eslint-disable-next-line no-unused-vars
 exports.authorCreateGet = (req, res) =>
   utils.loadHtml('author_form', { title: 'Create Author' });
 

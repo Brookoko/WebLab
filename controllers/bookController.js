@@ -7,6 +7,7 @@ const bookInstance = require('../models/bookinstance');
 const async = require('async');
 const utils = require('../utils');
 
+// eslint-disable-next-line no-unused-vars
 exports.index = (req, res) => {
   async.parallel({
     bookCount(callback) {
