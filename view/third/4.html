@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div{
+			display: inline-block;
+			margin-right: 100px;
+			width: 350px;
+		}
+	</style>
+	<script type="text/javascript" src='../js/4.js'></script>
+	<title></title>
+</head>
+<body>
+	<div>
+		<form name="imgs">
+			<p><input type="radio" name="pic" value="0"><img src="gtx780.jpg" width="150" height="150"></p>
+			<p><input type="radio" name="pic" value="1"><img src="gtx980.png" width="150" height="150"></p>
+			<p><input type="radio" name="pic" value="2"><img src="gtx1080.jpg" width="150" height="150"></p>
+			<p><input type="button" name="res" onclick="swap(imgs)" value="Click"></p>
+		</form>
+	</div>
+	<br>
+	<div>
+		<form name="scope">
+			<p><img src="gtx1080.jpg" width="150" height="150" name='picture' onmouseout="zoomOut(scope)" onmouseenter="zoomIn(scope)"></p>
+		</form>
+	</div>
+	<br>
+	<div class="Menu">
+		<form class='menu'>
+			<p><img src="home.png" width="250" height="100" class="menu_item"></p>
+			<p><img src="shop.png" width="250" height="100" class="menu_item"></p>
+			<p><img src="contact.png " width="250" height="100" class="menu_item"></p>
+			<script type="text/javascript">hover()</script>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Бінарний пошук з табл. проміжних значень</title>
+    <script src="../js/11.js"></script>
+  </head>
+  <body onload="setInterval(() => animation(form1), 80)">
+    <form name="form1">
+      <br>
+      <textarea name="anim" cols="15" rows="15" style="text-align: center; line-height: 10px; border: none; resize: none; margin:0 auto; width: 100%; font-size: 20px;"></textarea>
+      <br>
+      Array: <input type="text" name="arr">
+      <br>
+      Positive count: <input type="text" name="pos">
+      <input type="button" value="Determine" onclick="positiveCount(form1)">
+      <br>
+      Max: <input type="text" name="max">
+      <input type="button" value="Determine" onclick="maxArr(form1)">
+    </form>
+  </body>
+</html> 

@@ -1,0 +1,118 @@
+<html>
+  <head> 
+    <meta charset="utf-8">
+    <script src="../js/7.js"></script>
+    <link rel="stylesheet" href="../styles/table.css" type="text/css" />
+  </head>
+  <body onload="prepare()">
+    <form name="colorTable">
+      <table id="tableToChange">
+        <tr>
+          <td onclick="change(obj, 0, 0)"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <br>
+      <select name="colorValue" id="color">
+        <option value=null>None</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+      </select>
+      <select name="image" id="image">
+        <option value=null>None</option>
+        <option value="../images/cat.jpg">Cat</option>
+        <option value="../images/dog.jpg">Dog</option>
+        <option value="../images/flower.jpg">Flower</option>
+      </select>
+      <input type="button" value="Change" onclick="change(colorTable)">
+    </form>
+    <form name="products">
+        <select name="productA">
+          <option value="bread">Bread</option>
+          <option value="tomato">Tomato</option>
+          <option value="cheese">Cheese</option>
+        </select>
+        <select name="numberA">
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+          <option value=3>3</option>
+        </select>
+        <input type="text" name="costA" value="0">
+        <br>
+        <select name="productB">
+          <option value="bread">Bread</option>
+          <option value="tomato">Tomato</option>
+          <option value="cheese">Cheese</option>
+        </select>
+        <select name="numberB">
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+          <option value=3>3</option>
+        </select>
+        <input type="text" name="costB" value="0">
+        <br>
+        <select name="productC">
+          <option value="bread">Bread</option>
+          <option value="tomato">Tomato</option>
+          <option value="cheese">Cheese</option>
+        </select>
+        <select name="numberC">
+          <option value=0>0</option>
+          <option value=1>1</option>
+          <option value=2>2</option>
+          <option value=3>3</option>
+        </select>
+        <input type="text" name="costC" value="0">
+        <br>
+        Cost: <input type="text" name="res">
+        <input type="button" value="Calculate" onclick="calculate(products)">
+      </form>
+  </body>
+</html>

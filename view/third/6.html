@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		input[type=checkbox]{
+			transform: scale(1.5);
+		}
+	</style>
+	<script type="text/javascript" src='../js/6.js'></script>
+	<title></title>
+</head>
+<body>
+	<div align="center">
+		<form name='study'>
+			<h1><center>English lessons</center></h3>
+			<h3>Engish level</h2>
+			<p>A1<input type="radio" name="level" value="30">A2<input type="radio" name="level" value="50">
+			   B1<input type="radio" name="level" value="70">B2<input type="radio" name="level" value="100"></p>
+			<h3>Types of training</h3>
+			<p>
+				With teacher <input type="Checkbox" name="training1" value="50"> Lesson with native english speakers<input type="Checkbox" name="training2" value="80">
+			</p>
+			<h3>Lentgh</h3>
+			<p>
+				6 month <input type="radio" name="period" value="50"> 1 year<input type="radio" name="period" value="85">
+			</p>
+			<h3>Materials</h3>
+			<p>
+				E-Mail <input type="Checkbox" name="materials1" value="30">Books<input type="Checkbox" name="materials2" value="60">
+			</p>
+
+			<h3>Total cost: <output name='result'>0</output>$</h3>
+			<script type="text/javascript">calculator(study)</script>
+		</form>
+	</div>
+</body>
+</html>

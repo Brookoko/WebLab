@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src='../js/10.js'></script>
+        <style>
+            div{
+                border:solid 1px black;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <form name='count'>
+                <p>Enter text: <input type="text" name='words'> <button type="button" onclick='wordsCounter(count)'>Count</button></p>
+                 <output name='result'></output>
+            </form>
+        </div>
+        <div>
+            <form name='replace'>
+                <p>Enter text: <input type="text" name='words'> <button type="button" onclick='wordReplacer(replace)'>Replace</button></p>
+                <p>Enter word to replace: <input type="text" name='old_word'> Enter word for replace: <input type="text" name='new_word'></p>
+                <output name='result'></output>
+            </form>
+        </div>
+
+        <div>
+            <form name='trim'>
+                <p>Enter text: <input type="text" name='words'> <button type="button" onclick='spaceDeleter(trim)'>Trim</button></p>
+                <output name='result'></output>
+            </form>
+        </div>
+    </body>
+</html> 
