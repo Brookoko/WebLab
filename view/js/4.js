@@ -1,57 +1,69 @@
+'use strict';
+
+// eslint-disable-next-line no-unused-vars
 function swap(obj) {
-	num = Number(obj.pic.value);
-	images = obj.getElementsByTagName("img");
-	len = images.length;
-	temp = images[len - 1].src;
-	images[len - 1].src = images[num].src;
-	images[num].src = temp;
+  const num = Number(obj.pic.value);
+  const images = obj.getElementsByTagName('img');
+  const len = images.length;
+  const temp = images[len - 1].src;
+  images[len - 1].src = images[num].src;
+  images[num].src = temp;
 }
 
+// eslint-disable-next-line no-unused-vars
 function zoomIn(obj) {
-	obj.picture.width = 250;
-	obj.picture.height = 250;
+  obj.picture.width = 250;
+  obj.picture.height = 250;
 
 }
 
+// eslint-disable-next-line no-unused-vars
 function zoomOut(obj) {
-	obj.picture.width = 150;
-	obj.picture.height = 150;
+  obj.picture.width = 150;
+  obj.picture.height = 150;
 
 }
 
+// eslint-disable-next-line no-unused-vars
 function hover() {
-	menu_items = document.getElementsByClassName("menu_item");
-	for (let i = 0; i < menu_items.length; i++) {
-		menu_items[i].addEventListener("mouseenter", e => bind_enter(e, i));
-		menu_items[i].addEventListener("mouseleave", e => bind_leave(e, i));
-	}
+  const menuItems = document.getElementsByClassName('menu_item');
+  for (let i = 0; i < menuItems.length; i++) {
+    menuItems[i].addEventListener('mouseenter',
+      e => replaceItem(e, menuItems, i));
+    menuItems[i].addEventListener('mouseleave',
+      e => bindLeave(e, menuItems, i));
+  }
 }
 
-function bind_enter(event,index) {
-	replace_item(menu_items[index]);
+// eslint-disable-next-line no-unused-vars
+function bindEnter(event, menuItems, index) {
+  replaceItem(menuItems[index]);
 }
 
-function bind_leave(event, index) {
-	replace_item_back(menu_items[index]);
+// eslint-disable-next-line no-unused-vars
+function bindLeave(event, menuItems, index) {
+  replaceItemBack(menuItems[index]);
 }
 
-function replace_item(item) {
-	const arr = item.src.split('/');
-	const name = arr[arr.length - 1];
-	const names = name.split('.')
-	names[0] = names[0] + "_m";
-	new_name = names.join('.');
-	console.log(new_name);
-	item.src = new_name;
-	item.width = 330;
+// eslint-disable-next-line no-unused-vars
+function replaceItem(item) {
+  const arr = item.src.split('/');
+  const name = arr[arr.length - 1];
+  const names = name.split('.');
+  names[0] += '_m';
+  const newName = names.join('.');
+  console.log(newName);
+  item.src = newName;
+  item.width = 330;
 }
 
-function replace_item_back(item) {
-	const arr = item.src.split('/');
-	const name = arr[arr.length - 1];
-	names = name.split(".");
-	names[0] = names[0].substring(0, names[0].length - 2);
-	new_name = names.join('.');
-	item.src = new_name;
-	item.width = 250;
+// eslint-disable-next-line no-unused-vars
+function replaceItemBack(item) {
+  const arr = item.src.split('/');
+  const name = arr[arr.length - 1];
+  const names = name.split('.');
+  names[0] = names[0].substring(0, names[0].length - 2);
+  const newName = names.join('.');
+  item.src = newName;
+  item.width = 250;
 }

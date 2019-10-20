@@ -1,7 +1,9 @@
-const router = { }
+'use strict';
+
+const router = { };
 
 exports.router = router;
-exports.post = () => { }
+exports.post = () => { };
 exports.get = (url, value) => {
   router[url] = value;
-}
+};

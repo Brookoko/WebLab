@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const frames = [
   [
@@ -253,6 +253,7 @@ const frames = [
 
 let count = ' ';
 
+// eslint-disable-next-line no-unused-vars
 const animation = obj => {
   let res = '';
   for (const line of frames[count % frames.length]) {
@@ -263,15 +264,17 @@ const animation = obj => {
   }
   count++;
   obj.anim.value = res;
-}
+};
 
+// eslint-disable-next-line no-unused-vars
 const positiveCount = obj => {
   const arr = obj.arr.value.split(' ').map(el => Number(el));
   obj.pos.value = arr.filter(el => el > ' ').length;
-}
+};
 
+// eslint-disable-next-line no-unused-vars
 const maxArr = obj => {
   const arr = obj.arr.value.split(' ').map(el => Number(el));
   obj.max.value = Math.max(...arr);
-}
+};
 

@@ -1,8 +1,10 @@
+'use strict';
+
 const router = require('../router');
 const utils = require('../utils');
 
-router.get('/', utils.loadHtml('index.html'))
-router.get('/table', utils.loadHtml('table.html'))
+router.get('/', utils.loadHtml('index.html'));
+router.get('/table', utils.loadHtml('table.html'));
 router.get('/catalog', utils.loadHtml('site/catalog.html'));
 router.get('/books', utils.loadHtml('site/books.html'));
 router.get('/authors', utils.loadHtml('site/authors.html'));

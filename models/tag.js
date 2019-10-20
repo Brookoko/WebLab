@@ -1,7 +1,5 @@
 'use strict';
 
-const utils = require('../utils');
-
 function Tag(name) {
   this.name = name;
 }

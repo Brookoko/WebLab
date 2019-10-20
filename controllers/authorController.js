@@ -8,12 +8,10 @@ const Book = require('../models/book');
 exports.authorList = (req, res, next) => {
   Author.find()
     .sort([['lastName', 'ascending']])
-    .exec((err, listOfAuthors) => {
-      return utils.loadHtml('author_list', {
-        title: 'Author List',
-        listOfAuthors
-      });
-    });
+    .exec((err, listOfAuthors) => utils.loadHtml('author_list', {
+      title: 'Author List',
+      listOfAuthors
+    }));
 };
 
 exports.authorDetail = (req, res, next) => {
@@ -42,7 +40,8 @@ exports.authorDetail = (req, res, next) => {
   });
 };
 
-exports.authorCreateGet = (req, res) => utils.loadHtml('author_form', { title: 'Create Author' });
+exports.authorCreateGet = (req, res) =>
+  utils.loadHtml('author_form', { title: 'Create Author' });
 
 exports.authorDeleteGet = (req, res, next) => {
   async.parallel({

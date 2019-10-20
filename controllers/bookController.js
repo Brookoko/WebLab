@@ -24,12 +24,10 @@ exports.index = (req, res) => {
     genreCount(callback) {
       Genre.countDocuments({}, callback);
     }
-  }, (err, results) => {
-    return utils.loadHtml('index', {
-      title: 'Local Library Home',
-      error: err,
-      data: results });
-  });
+  }, (err, results) => utils.loadHtml('index', {
+    title: 'Local Library Home',
+    error: err,
+    data: results }));
 };
 
 exports.bookList = (req, res, next) => {

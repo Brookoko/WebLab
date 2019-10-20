@@ -1,0 +1,24 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "root.js",
+  "dependencies": {
+    "eslint": "^6.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "eslint ./view",
+    "start": "npm run test; node root.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brookoko/WebLab.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Brookoko/WebLab/issues"
+  },
+  "homepage": "https://github.com/Brookoko/WebLab#readme"
+}
