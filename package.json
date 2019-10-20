@@ -9,7 +9,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "eslint ./",
-    "start": "npm run test; node root.js"
+    "start": "node root.js",
+    "web": "npm start"
   },
   "repository": {
     "type": "git",

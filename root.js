@@ -30,8 +30,9 @@ const server = http.createServer(async (req, res) => {
 });
 
 
-server.listen(config.port, config.hostname, () => {
-  console.log(`Server running at http://${config.hostname}:${config.port}/`);
+server.listen(process.env.PORT || config.port, config.hostname, () => {
+  const port = server.address().port;
+  console.log(`Server running at http://${config.hostname}:${port}/`);
 });
 
 server.on('error', err => {
