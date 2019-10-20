@@ -30,7 +30,7 @@ const server = http.createServer(async (req, res) => {
 });
 
 
-server.listen(process.env.PORT || config.port, config.hostname, () => {
+server.listen(process.env.PORT || config.port, () => {
   const port = server.address().port;
   console.log(`Server running at http://${config.hostname}:${port}/`);
 });
